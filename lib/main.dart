@@ -79,29 +79,27 @@ class _MyHomePageState extends State<MyHomePage> {
               home: Scaffold(
                 body: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 70,
                     ),
-                    Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          TextFormField(
-                            controller: text,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Screen(text: text.text),
-                                ),
-                              );
-                            },
-                            child: const Text("next page"),
-                          ),
-                        ],
-                      ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        TextFormField(
+                          controller: text,
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Screen(text: text.text),
+                              ),
+                            );
+                          },
+                          child: const Text("next page"),
+                        ),
+                      ],
                     ),
                     Column(),
                   ],
